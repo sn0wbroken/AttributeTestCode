@@ -1,12 +1,22 @@
 ﻿// AttributeTest.cpp : このファイルには 'main' 関数が含まれています。プログラム実行の開始と終了がそこで行われます。
 //
 
+//TestFail
 #include "pch.h"
 #include <iostream>
+namespace nul {
+	void speak()
+	{
+		std::cout << "Hollow Knight" << std::endl;
+	}
+}
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	int i[[nul::speak()]];
+	i = 0;
+	std::cout << i << std::endl;
+	return 0;
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
